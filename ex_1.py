@@ -3,12 +3,22 @@ class Point:
     color = 'red'
     circle = 2
 
+    def __init__(self, x=0, y=0):
+        self.x = x
+        self.y = y
+
+    def __del__(self):
+        print('Удаление экземпляра: ' + str(self))
+
     def set_coords(self, x, y):
         self.x = x
         self.y = y
 
     def get_coords(self):
         return (self.x, self.y)
+
+pt = Point(1, 2)
+print(pt.__dict__)
 
 # Итог 1 занятия:
 # Класс может сожержать:
@@ -33,3 +43,7 @@ class Point:
 #//////////////////////////
 
 # Итог 3 занятия:
+# Инициализатор и финализатор 
+# __имя магического метода__
+# __init__(self) - Инициализатор объекта класса.
+# __del__(self) - Финализатор класса.
